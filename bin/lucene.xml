@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GBK"?>  
+<lucene>  
+    <rule>  
+        <className>com.normandy.position.domain.NorGoodsDO</className>  
+        <fields>  
+            id,g_id,name,price,type,brand,style,material,fitting,color,youhui,leibie,size_width,size_height,pic_url1  
+        </fields>  
+        <special>  
+            <special-field>leibie</special-field>  
+            <special-convert>com.normandy.position.web.domain.GOOD_LEI_BIE_ENUM</special-convert>  
+        </special>  
+        <special>  
+            <special-field>style</special-field>  
+            <special-convert>com.normandy.position.web.domain.GOOD_STYLE_ENUM</special-convert>  
+        </special>  
+        <special>  
+            <special-field>youhui</special-field>  
+            <special-convert>com.normandy.position.web.domain.GOOD_YUHHUI_ENUM</special-convert>  
+        </special>  
+        <noNeedAnalyzer>price,pic_url1</noNeedAnalyzer>  
+        <indexDir>c:/luceneIndex/goods</indexDir>  
+    </rule>  
+</lucene>  
